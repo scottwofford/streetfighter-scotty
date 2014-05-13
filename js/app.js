@@ -1,5 +1,3 @@
-// CHECK 
-
 $(document).ready(function() {
   $('.ryu').mouseenter(function() {
     $('.ryu-still').hide();
@@ -30,69 +28,47 @@ $(document).ready(function() {
 
 // Start Scott's Work
 
-// Help from Justin
-    $(document).keydown(function() {
-       alert( "Handler for .keydown() called." );
-     });
-// First Task: listen for X
 
-// First Try (jQuery)
-  .keydown(function() {
-    alert( "Handler for .keydown() called." );
-    // The alert doesn't work
 
-// Second Try (stack overflow)
-.trigger($.Event( 'keydown', 
-  {which:$.ui.88.ENTER, keyCode:$.ui.keyCode.ENTER}));
+// First Task - make sure alert works
 
-// Third Try
+// $(document).keydown(function() {
+// alert( "Handler for .keydown() called." );
+//      });
 
-$(function() {
-    var e = $.Event('keypress');
-    e.which = 88; // Character 'X'
-    $('item').trigger(e);
-});
+// $(document).keydown(function() {
+//   console.log();
+//      });
 
-// Second Task: Make Images toggle: 
-  // Execute action when key is pressed
-    // hide all posible images:
+// DOESN'T WORK WITHOUT PASTING IN CONSOLE...
+
+// Second task: make it so only "X" works
+
+$(document).keydown(function()event.which()
+  if (event="88"){
     $('.ryu-throwing').hide();
     $('.ryu-ready').hide();
-    // show cool image: 
     $('.ryu-cool').show();
-  // commands to make it go back to normal: 
-    // hide cool image:
+  }
+  else{}
+  );
+
+$(document).keyup(function()event.which()
+  if (event="88"){
     $('.ryu-cool').hide();
-    // Show previous image
-    // Need to create if function to decide which to put back? 
     $('.ryu-throwing').show();
     $('.ryu-ready').show();
+  } 
+  else{}
+  );
 
-// If Statement from jQuery
-
-// if (expression){
-//    Statement(s) to be executed if expression is true
-// }
-// else{
-//    Statement(s) to be executed if expression is false
-// }
-
-
-  });
+// TONS OF ERRORS, DON'T EVEN KNOW WHERE TO START...
 
 // End Scott's Work
 
 // Start Copy Paste
 
-// Answer from stackoverflow: 
-// it seem that the definitive way is 
-// : $('input#search').trigger($.Event( 'keydown', 
-  // {which:$.ui.keyCode.ENTER, 
-    // keyCode:$.ui.keyCode.ENTER}));
-
 // End Copy Paste
-
-
 
 });
   
