@@ -25,30 +25,52 @@ $(document).ready(function() {
     $('.ryu-throwing').hide();
     $('.ryu-ready').show();
   });
-});
 
 // Start Scott's Work
 
 
-  $(document).keydown(function(event) {
-    var key = String.fromCharCode(event.which);
-    if (key == 'X') {
-      $('.ryu-still').hide();
-      $('.ryu-ready').hide();
-      $('.ryu-cool').show();
-    }
-  })
-    .keyup(function(event) {
-      var key = String.fromCharCode(event.which);
-      if (key =='X') {
-        $('.ryu-cool').hide();
-        $('.ryu-still').show();
-      }
-  });
 
+// First Task - make sure alert works
+
+// $(document).keydown(function() {
+// alert( "Handler for .keydown() called." );
+//      });
+
+// $(document).keydown(function() {
+//   console.log();
+//      });
+
+// DOESN'T WORK WITHOUT PASTING IN CONSOLE...
+
+// Second task: make it so only "X" works
+
+$(document).keydown(function()event.which()
+  if (event="88"){
+    $('.ryu-throwing').hide();
+    $('.ryu-ready').hide();
+    $('.ryu-cool').show();
+  }
+  else{}
+  );
+
+$(document).keyup(function()event.which()
+  if (event="88"){
+    $('.ryu-cool').hide();
+    $('.ryu-throwing').show();
+    $('.ryu-ready').show();
+  } 
+  else{}
+  );
+
+// TONS OF ERRORS, DON'T EVEN KNOW WHERE TO START...
 
 // End Scott's Work
 
+// Start Copy Paste
+
+// End Copy Paste
+
+});
   
 function playHadouken () {
   $('#hadouken-sound')[0].volume = 0.5;
